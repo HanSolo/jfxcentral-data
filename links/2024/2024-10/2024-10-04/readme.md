@@ -22,7 +22,7 @@
 
 ## Podcasts, Videos, Books
 
-* **Frank Delporte** published a new "JavaFX In Action" interview: [JavaFX In Action with Christoph Schwentker about JabRef](https://webtechie.be/post/2024-10-01-jfxinaction-christoph-schwentker/), a tool written in Java and JavaFX to collect, organize, and discover literature for research projects.
+* **Frank Delporte** published a new "JavaFX In Action" interview: [JavaFX In Action with **Christoph Schwentker** about JabRef](https://webtechie.be/post/2024-10-01-jfxinaction-christoph-schwentker/), a tool written in Java and JavaFX to collect, organize, and discover literature for research projects.
 
 ## Tutorials
 
