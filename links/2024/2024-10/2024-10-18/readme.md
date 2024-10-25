@@ -3,7 +3,6 @@
 * **Artur Skowronski** highlights in his [JVM Weekly newsletter](https://www.jvm-weekly.com/p/what-will-jdk-24-bring-jvm-weekly) some JavaFX facts:
   * _[JavaFX 23 announced by Kevin Rushforth](https://github.com/openjdk/jfx/blob/master/doc-files/release-notes-23.md) has hit the scene and brought with it a warning: "It's time to update." JavaFX has dropped support for older versions and will now require JDK 21._
   * _Oracle has [announced that support for JavaFX in JDK 8](https://www.oracle.com/java/technologies/java-se-support-roadmap.html), the last version they released, will end in March next year._
-* Reminder from last week: **Frank Delporte** also wrote about this change in the Oracle support for JavaFX in their Java 8 distributions: [End of the Road for JavaFX in JDK 8: Keeping Your Apps Alive](https://thenewstack.io/end-of-the-road-for-javafx-in-jdk-8-keeping-your-apps-alive/).
 * [**SamFx** happily announced the merge of his first pull request into the OpenJFX code](https://x.com/SamNaFX/status/1817528341194252682) to fix "_Push Notification fails on Android when app closed_."
 
 ## Applications

@@ -1,6 +1,7 @@
 ## Core
 
 * Just a tip: keep an eye on [github.com/openjdk/mobile](https://github.com/openjdk/mobile). It's a project to bring more mobile support to the OpenJDK. This will, once integrated, make it easier to support JavaFX on even more (mobile) platforms.
+* [Azul is highlighting the removal by Oracle of the support for JavaFX in their Java 8 distributions](https://www.azul.com/blog/azul-is-here-to-help-you-with-javafx-8-changes-in-2025/) starting in 2025.
 
 ## Applications
 
