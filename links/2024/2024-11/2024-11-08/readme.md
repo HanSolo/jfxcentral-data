@@ -20,7 +20,7 @@
 
 ## Podcasts, Videos, Books
 
-*
+* Not new, but just discovered: [**Chad Preisler** uses a JavaFX UI to demo Kafka Outer Joins](https://bsky.app/profile/chadpreisler.bsky.social/post/3l3vjfi4z742r): "_Make sure to stick around for the [demo right around four and half minutes into the video](https://www.youtube.com/watch?v=bGffINGD9KQ). Happy coding!_"
 
 ## Tutorials
 
