@@ -30,6 +30,7 @@
 
 * [On Bluesky, **Gerrit Gruwald** explains](https://bsky.app/profile/hansolo.bsky.social/post/3l6c24vt4222g) that the [visuals of his Devoxx presentation](https://www.youtube.com/watch?v=Jh79ojcror0) are created with JavaFX.
 * You can read more about JavaFX Nodes versus Canvas experiments by **Frank Delporte** in the [German JavaMagazin edition 12.2024](https://entwickler.de/java/javafx-nodes-versus-canvas).
+* [**Sean Phillips** shared on LinkedIn](https://www.linkedin.com/posts/seanmiphillips_projected-volumetric-detection-method-applied-activity-7256695177157689345-2Okp/): "_Applying 3D Projected Volumetric Detection method to the Biden Robocall Deep Fake. ... Caveats to this demonstration are that this was clearly a controlled experiment and importantly is a qualitative manual process. However it is clear the potential of the method and with sufficient further development could be largely automated._"
 
 ## JFX Central
 
