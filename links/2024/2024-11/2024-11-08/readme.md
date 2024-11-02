@@ -16,7 +16,7 @@
 
 ## Components, Libraries, Tools
 
-* **Pedro Duke** continues with his work in progress on the next release of Transit Theme:
+* **Pedro Duke** continues with his work in progress on the next release of Transit Theme and shared more screenshots:
   * [Part 9](https://x.com/P_Duke/status/1850541268331360395): "_New LIGHT and DARK styles for Spinner and ChoiceBox_."
   * [Part 10](https://x.com/P_Duke/status/1852713716531314778): "_New LIGHT and DARK styles for MenuButton and SplitMenuButton_"
   
