@@ -1352,5 +1352,21 @@
     "personIds": [
       "f.delporte"
     ]
+  },
+  {
+    "name": "JavaFX In Action with Özkan Pakdil about Swaggerific",
+    "tags": "JFXInAction, javafx, application",
+    "type": "JFX In Action",
+    "platform": "Desktop",
+    "domain": "Utilities",
+    "description": "This interview gives insights into a new open-source JavaFX project: Swaggerific. It's created by Özkan Pakdil, who tells us more about this Postman alternative to interact with REST endpoints documented with a Swagger JSON.",
+    "id": "3_T0LDZ-Wt4",
+    "minutes" : "12",
+    "createdOn": "2024-11-05",
+    "modifiedOn": "2024-11-05",
+    "publishedOn": "2024-11-05",
+    "personIds": [
+      "f.delporte"
+    ]
   }
 ]

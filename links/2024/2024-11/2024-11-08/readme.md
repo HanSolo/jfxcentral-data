@@ -1,6 +1,6 @@
 ## Core
 
-* 
+* [**Johan Vos** shared a weekend update](https://mastodon.social/@johanvos/113415033521942389): "_Getting ready to create a developer preview for the headless platform._"
 
 ## SceneBuilder
 
@@ -37,7 +37,8 @@
   * "_How could we skip JavaFX, especially with a new and interesting application in this technology?_"
   * "_[JTaccuino](https://github.com/jtaccuino/jtaccuino) is a notebook developed for Java programmers, allowing users to interactively experiment with code._"
   * "_The DeepNets project, which is a reference implementation of JSR 381, recently [boasted new tooling enhancements](https://x.com/DeepNetts/status/1835292030315995390)._"
-  
+* [**saige!** shared on Bluesky](https://bsky.app/profile/catgirlin.space/post/3l7u33iijn42k): "_I made a little animation in JavaFX. Gonna try and convince my group that we should use it for our project as a loading screen._"
+
 ## JFX Central
 
 * The overview of the September Links Of The Week is [published on Foojay](https://foojay.io/today/javafx-links-of-october-2024/).
