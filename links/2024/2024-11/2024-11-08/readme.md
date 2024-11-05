@@ -16,6 +16,8 @@
 
 ## Components, Libraries, Tools
 
+* [**Carl Dea** published Cognitive 1.5.0](https://x.com/carldea/status/1851983577321255003), a JavaFX MVVM forms library.
+ Check the [wiki for new features](https://github.com/carldea/cognitive/wiki#new-features).
 * **Pedro Duke** continues with his work in progress on the next release of Transit Theme and shared more screenshots:
   * [Part 9](https://x.com/P_Duke/status/1850541268331360395): "_New LIGHT and DARK styles for Spinner and ChoiceBox_."
   * [Part 10](https://x.com/P_Duke/status/1852713716531314778): "_New LIGHT and DARK styles for MenuButton and SplitMenuButton_"
@@ -40,9 +42,11 @@
   * "_[JTaccuino](https://github.com/jtaccuino/jtaccuino) is a notebook developed for Java programmers, allowing users to interactively experiment with code._"
   * "_The DeepNets project, which is a reference implementation of JSR 381, recently [boasted new tooling enhancements](https://x.com/DeepNetts/status/1835292030315995390)._"
 * [**saige!** shared on Bluesky](https://bsky.app/profile/catgirlin.space/post/3l7u33iijn42k): "_I made a little animation in JavaFX. Gonna try and convince my group that we should use it for our project as a loading screen._"
+* [**Anthony Goubard** shared a screenshot](https://x.com/Anthony_Goubard/status/1853791630815277332): "_New in the IDE plugin 'Applet Runner': JavaFXApplet and SceneApplet classes to run a JavaFX application (or scene) embedded in your IDE. See the demo of TilesFX from **Gerrit Grunwald** running in IntelliJ IDEA._"
 
 ## JFX Central
 
+* [Message from **Dirk Lemmermann**](https://x.com/dlemmermann/status/1853719535901122837): "_JFX Central is now available as a web app, a desktop app, and an iOS application (via Gluon). We still need to get it into the Google Play Store. Anyone up for the job? If any code changes are required I could work on that. I just need somebody to take over the deployment part to the Play Store. I do not feel at home at all in the Android space :-)_"
 * The overview of the September Links Of The Week is [published on Foojay](https://foojay.io/today/javafx-links-of-october-2024/).
 * New content:
   * Video: [JavaFX In Action with Özkan Pakdil about Swaggerific](https://www.jfx-central.com/videos/3_T0LDZ-Wt4)
