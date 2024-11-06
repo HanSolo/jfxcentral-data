@@ -8,7 +8,7 @@
 
 ## Applications
 
-* [**Robert Ladstätter** announced LogoRRR 24.5.1](https://graz.social/@rladstaetter/113380976846373387): "_More information about the included features and bugfixes is [available here](https://github.com/rladstaetter/LogoRRR/releases/tag/24.5.1)_."
+* [**Robert Ladstätter** announced LogoRRR 24.5.1](https://graz.social/@rladstaetter/113380976846373387) for Windows, Mac, and Linux: "_More information about the included features and bugfixes is [available here](https://github.com/rladstaetter/LogoRRR/releases/tag/24.5.1)_."
 
 ## Games
 
