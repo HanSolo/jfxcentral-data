@@ -2,17 +2,9 @@
 
 * [**Johan Vos** shared a weekend update](https://mastodon.social/@johanvos/113415033521942389): "_Getting ready to create a developer preview for the headless platform._"
 
-## SceneBuilder
-
-* 
-
 ## Applications
 
 * [**Robert Ladstätter** announced LogoRRR 24.5.1](https://graz.social/@rladstaetter/113380976846373387) for Windows, Mac, and Linux: "_More information about the included features and bugfixes is [available here](https://github.com/rladstaetter/LogoRRR/releases/tag/24.5.1)_."
-
-## Games
-
-* 
 
 ## Components, Libraries, Tools
 
@@ -26,11 +18,6 @@
 
 * Not new, but just discovered: [**Chad Preisler** uses a JavaFX UI to demo Kafka Outer Joins](https://bsky.app/profile/chadpreisler.bsky.social/post/3l3vjfi4z742r): "_Make sure to stick around for the [demo right around four and half minutes into the video](https://www.youtube.com/watch?v=bGffINGD9KQ). Happy coding!_"
 * **Frank Delporte** published a new "JFX In Action" interview that gives insights into a new open-source JavaFX project: Swaggerific. It's created by [**Özkan Pakdil**](https://techhub.social/@thejvmbender), who tells us more about this Postman alternative to interact with REST endpoints documented with a Swagger JSON. The [video is on YouTube](https://lnkd.in/eidGJkSY), and more info is provided in [this blog post](https://lnkd.in/eRdekHTm).
-
-
-## Tutorials
-
-*
 
 ## Miscellaneous
 
