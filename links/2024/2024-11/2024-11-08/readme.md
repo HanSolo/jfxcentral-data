@@ -17,7 +17,7 @@
 ## Podcasts, Videos, Books
 
 * Not new, but just discovered: [**Chad Preisler** uses a JavaFX UI to demo Kafka Outer Joins](https://bsky.app/profile/chadpreisler.bsky.social/post/3l3vjfi4z742r): "_Make sure to stick around for the [demo right around four and half minutes into the video](https://www.youtube.com/watch?v=bGffINGD9KQ). Happy coding!_"
-* **Frank Delporte** published a new "JFX In Action" interview that gives insights into a new open-source JavaFX project: Swaggerific. It's created by [**Özkan Pakdil**](https://techhub.social/@thejvmbender), who tells us more about this Postman alternative to interact with REST endpoints documented with a Swagger JSON. The [video is on YouTube](https://lnkd.in/eidGJkSY), and more info is provided in [this blog post](https://lnkd.in/eRdekHTm).
+* **Frank Delporte** published a new "JFX In Action" interview that gives insights into a new open-source JavaFX project: Swaggerific. It's created by [**Özkan Pakdil**](https://techhub.social/@thejvmbender), who tells us more about this Postman alternative to interact with REST endpoints documented with a Swagger JSON. The [video is on YouTube](https://www.youtube.com/watch?v=3_T0LDZ-Wt4), and more info is provided in [this blog post](https://webtechie.be/post/2024-11-05-jfxinaction-ozkan-pakdil/).
 
 ## Miscellaneous
 
