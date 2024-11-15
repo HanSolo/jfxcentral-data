@@ -1,7 +1,7 @@
 ## Core
 
 * [**Johan Vos** shared an update on OpenJDK Mobile](https://mastodon.social/@johanvos/113458868707472261), a project to bring Java (and JavaFX) better and easier to mobile: "_Progress on using hotspot on iOS without AOT: building native JDK libs = ok, _VM start = ok, Reading bytecodes = ok, Starting interpreter = work started. The reason I'm doing this with hotspot is that I only want to use code from OpenJDK. I need to 100% understand how the VM (e.g. hotspot) is doing its work. The docs in OpenJDK + JBS are extremely helpful and aligned with the JVM spec doc. Maintainability is a key asset in OpenJDK._"
-* [**Carl Dea** shared](https://x.com/carldea/status/1856703165535584640): "_JavaFX will have custom image loaders! See [JDK-8343315](https://bugs.openjdk.org/browse/JDK-8343315. Man I love JavaFX! Thank you, [@jddarcy](https://x.com/jddarcy)!_"
+* [**Carl Dea** shared](https://x.com/carldea/status/1856703165535584640): "_JavaFX will have custom image loaders! See [JDK-8343315](https://bugs.openjdk.org/browse/JDK-8343315). Man I love JavaFX! Thank you, [@jddarcy](https://x.com/jddarcy)!_"
 
 ## SceneBuilder
 
