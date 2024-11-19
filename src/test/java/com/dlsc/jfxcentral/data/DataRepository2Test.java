@@ -239,7 +239,7 @@ public class DataRepository2Test {
                 .findFirst();
 
         assertTrue(fd.isPresent());
-        assertEquals("https://bsky.app/profile/frankdelporte.bsky.social", fd.get().getBluesky(), "bluesky link not loaded");
+        assertEquals("https://foojay.social/@frankdelporte", fd.get().getMastodon(), "mastodon link not loaded");
     }
 
     @Test
