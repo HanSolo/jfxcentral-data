@@ -239,7 +239,24 @@ public class DataRepository2Test {
                 .findFirst();
 
         assertTrue(fd.isPresent());
-        assertEquals("https://foojay.social/@frankdelporte", fd.get().getMastodon(), "mastodon link not loaded");
+        assertEquals("https://bsky.app/profile/frankdelporte.bsky.social", fd.get().getBluesky(), "bluesky link not loaded");
+    }
+
+    @Test
+    public void shouldLoadPersonBluesky() {
+        // given
+        DataRepository2 repository = DataRepository2.getInstance();
+        repository.reload();
+
+        assertFalse(repository.getPeople().isEmpty());
+
+        // when
+        Optional<Person> fd = repository.getPeople().stream()
+                .filter(p -> p.getId().equals("f.delporte"))
+                .findFirst();
+
+        assertTrue(fd.isPresent());
+        assertEquals("https://bsky.app/profile/frankdelporte.bsky.social", fd.get().getBluesky(), "bluesky link not loaded");
     }
 
     @Test
