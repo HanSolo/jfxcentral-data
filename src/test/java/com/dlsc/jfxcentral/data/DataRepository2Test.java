@@ -1,24 +1,6 @@
 package com.dlsc.jfxcentral.data;
 
-import com.dlsc.jfxcentral.data.model.Blog;
-import com.dlsc.jfxcentral.data.model.Book;
-import com.dlsc.jfxcentral.data.model.Company;
-import com.dlsc.jfxcentral.data.model.Documentation;
-import com.dlsc.jfxcentral.data.model.Download;
-import com.dlsc.jfxcentral.data.model.IkonliPack;
-import com.dlsc.jfxcentral.data.model.LearnJavaFX;
-import com.dlsc.jfxcentral.data.model.LearnMobile;
-import com.dlsc.jfxcentral.data.model.LearnRaspberryPi;
-import com.dlsc.jfxcentral.data.model.Library;
-import com.dlsc.jfxcentral.data.model.LibraryInfo;
-import com.dlsc.jfxcentral.data.model.Person;
-import com.dlsc.jfxcentral.data.model.Post;
-import com.dlsc.jfxcentral.data.model.RealWorldApp;
-import com.dlsc.jfxcentral.data.model.Tip;
-import com.dlsc.jfxcentral.data.model.Tool;
-import com.dlsc.jfxcentral.data.model.Tutorial;
-import com.dlsc.jfxcentral.data.model.Utility;
-import com.dlsc.jfxcentral.data.model.Video;
+import com.dlsc.jfxcentral.data.model.*;
 import javafx.beans.property.StringProperty;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.BeforeAll;
@@ -274,6 +256,40 @@ public class DataRepository2Test {
             // then
             assertTrue(StringUtils.isNotBlank(text), "text missing for person ID " + member.getId());
         });
+    }
+
+    @Test
+    public void shouldLoadMemberMastodon() {
+        // given
+        DataRepository2 repository = DataRepository2.getInstance();
+        repository.reload();
+
+        assertFalse(repository.getMembers().isEmpty());
+
+        // when
+        Optional<Member> fd = repository.getMembers().stream()
+                .filter(m -> m.getId().equals("f.delporte"))
+                .findFirst();
+
+        assertTrue(fd.isPresent());
+        assertEquals("https://foojay.social/@frankdelporte", fd.get().getMastodon(), "mastodon link not loaded");
+    }
+
+    @Test
+    public void shouldLoadMemberBluesky() {
+        // given
+        DataRepository2 repository = DataRepository2.getInstance();
+        repository.reload();
+
+        assertFalse(repository.getMembers().isEmpty());
+
+        // when
+        Optional<Member> fd = repository.getMembers().stream()
+                .filter(m -> m.getId().equals("f.delporte"))
+                .findFirst();
+
+        assertTrue(fd.isPresent());
+        assertEquals("https://bsky.app/profile/frankdelporte.bsky.social", fd.get().getBluesky(), "bluesky link not loaded");
     }
 
     @Test
