@@ -1368,5 +1368,25 @@
     "personIds": [
       "f.delporte"
     ]
+  },
+  {
+    "name": "JavaFX In Action with Clément de Tastes about QuarkusFX",
+    "tags": "JFXInAction, javafx, library",
+    "type": "JFX In Action",
+    "platform": "Desktop",
+    "domain": "Libraries",
+    "description": "In this interview, we look at the combination of JavaFX and Quarkus. Thanks to QuarkusFX, created by Clément de Tastes, we can use the many advantages of the Quarkus system to create a desktop application.",
+    "id": "Vw9S9uuPTlQ",
+    "minutes" : "24",
+    "createdOn": "2024-11-19",
+    "modifiedOn": "2024-11-19",
+    "publishedOn": "2024-11-19",
+    "personIds": [
+      "f.delporte",
+      "c.detastes"
+    ],
+    "libraryIds": [
+      "quarkusfx"
+    ]
   }
 ]
