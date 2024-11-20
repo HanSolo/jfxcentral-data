@@ -23,8 +23,6 @@ import javafx.beans.property.StringProperty;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.testfx.framework.junit5.ApplicationExtension;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,18 +38,17 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class DataRepository2Test {
+public class DataRepositoryTest {
 
     @BeforeAll
     public static void setup() {
-        DataRepository2.setTesting(true);
+        DataRepository.setTesting(true);
     }
 
     @Test
     public void shouldLoadData() {
-
-        // when
-        DataRepository2 repository = DataRepository2.getInstance();
+        // given
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         // then
@@ -81,7 +78,7 @@ public class DataRepository2Test {
     @Test
     public void shouldClearData() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         // when
@@ -117,7 +114,7 @@ public class DataRepository2Test {
     @Test
     public void shouldRefreshData() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         // when
@@ -150,7 +147,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLibraryDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -167,7 +164,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLibraryInfo() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -184,7 +181,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLibraryInfoFiles() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -201,7 +198,7 @@ public class DataRepository2Test {
                 // then
                 assertTrue(StringUtils.isNotBlank(path));
 
-                File file = new File(DataRepository2.getInstance().getRepositoryDirectory(), "libraries/" + lib.getId() + "/" + path);
+                File file = new File(repository.getRepositoryDirectory(), "libraries/" + lib.getId() + "/" + path);
                 assertTrue(file.exists(), "file does not exist: " + file.getAbsolutePath() + " for library " + lib.getName());
 
             });
@@ -211,7 +208,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadPersonDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -228,7 +225,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadPersonMastodon() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -245,7 +242,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadMemberDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getMembers().isEmpty());
@@ -262,7 +259,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLinksOfTheWeek() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLinksOfTheWeek().isEmpty());
@@ -279,7 +276,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadNewsText() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getNews().isEmpty());
@@ -296,7 +293,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadTutorialText() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getTutorials().isEmpty());
@@ -313,7 +310,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadRealWorldDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getRealWorldApps().isEmpty());
@@ -330,7 +327,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadCompanyDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getCompanies().isEmpty());
@@ -347,7 +344,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadDownloadsDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getDownloads().isEmpty());
@@ -364,7 +361,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadBooksDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getBooks().isEmpty());
@@ -381,7 +378,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadBlogs() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getBlogs().isEmpty());
@@ -397,7 +394,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadToolsDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getTools().isEmpty());
@@ -414,7 +411,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadUtilityDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getUtilities().isEmpty());
@@ -431,7 +428,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLibraryArtifactVersion() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -459,7 +456,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetVideosByPerson() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -484,7 +481,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetBlogsByPerson() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -505,7 +502,7 @@ public class DataRepository2Test {
     @Test
     public void shouldNotGetGuiGarageBlog() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         // when
@@ -518,7 +515,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetLibrariesByPerson() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -539,7 +536,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetTipsByPerson() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -561,7 +558,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetBooksByPerson() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -582,7 +579,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetTutorialsByPerson() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -603,7 +600,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetDownloadsByPerson() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -624,7 +621,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetPersonById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -641,7 +638,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetCompanyById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getCompanies().isEmpty());
@@ -658,7 +655,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetLibraryById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -675,7 +672,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetBlogById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getBlogs().isEmpty());
@@ -692,7 +689,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetBookById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getBooks().isEmpty());
@@ -709,7 +706,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetLearnJavaFXById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLearnJavaFX().isEmpty());
@@ -732,7 +729,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLearnJavaFXDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLearnJavaFX().isEmpty());
@@ -749,7 +746,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetLearnMobileById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLearnMobile().isEmpty());
@@ -772,7 +769,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLearnMobileDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLearnMobile().isEmpty());
@@ -789,7 +786,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetLearnRaspberryPiById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLearnRaspberryPi().isEmpty());
@@ -812,7 +809,7 @@ public class DataRepository2Test {
     @Test
     public void shouldLoadLearnRaspberryPiDescription() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLearnRaspberryPi().isEmpty());
@@ -829,7 +826,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetRealWorldAppById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getRealWorldApps().isEmpty());
@@ -846,7 +843,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetToolById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getTools().isEmpty());
@@ -863,7 +860,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetUtilityById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getUtilities().isEmpty());
@@ -881,7 +878,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetDownloadById() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getDownloads().isEmpty());
@@ -898,7 +895,7 @@ public class DataRepository2Test {
     @Test
     public void shouldHaveValidDownloadsURL() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getDownloads().isEmpty());
@@ -930,7 +927,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetTutorialsByLibrary() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -951,7 +948,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetVideosByLibrary() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -972,7 +969,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetDownloadsByLibrary() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getLibraries().isEmpty());
@@ -993,7 +990,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetIkonliPacks() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         // when
@@ -1006,7 +1003,7 @@ public class DataRepository2Test {
     @Test
     public void shouldGetDocumentation() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         // when
