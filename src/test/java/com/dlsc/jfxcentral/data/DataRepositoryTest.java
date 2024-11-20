@@ -11,6 +11,7 @@ import com.dlsc.jfxcentral.data.model.LearnMobile;
 import com.dlsc.jfxcentral.data.model.LearnRaspberryPi;
 import com.dlsc.jfxcentral.data.model.Library;
 import com.dlsc.jfxcentral.data.model.LibraryInfo;
+import com.dlsc.jfxcentral.data.model.Member;
 import com.dlsc.jfxcentral.data.model.Person;
 import com.dlsc.jfxcentral.data.model.Post;
 import com.dlsc.jfxcentral.data.model.RealWorldApp;
@@ -240,6 +241,23 @@ public class DataRepositoryTest {
     }
 
     @Test
+    public void shouldLoadPersonBluesky() {
+        // given
+        DataRepository repository = DataRepository.getInstance();
+        repository.reload();
+
+        assertFalse(repository.getPeople().isEmpty());
+
+        // when
+        Optional<Person> fd = repository.getPeople().stream()
+                .filter(p -> p.getId().equals("f.delporte"))
+                .findFirst();
+
+        assertTrue(fd.isPresent());
+        assertEquals("frankdelporte.bsky.social", fd.get().getBluesky(), "bluesky link not loaded");
+    }
+
+    @Test
     public void shouldLoadMemberDescription() {
         // given
         DataRepository repository = DataRepository.getInstance();
@@ -254,6 +272,40 @@ public class DataRepositoryTest {
             // then
             assertTrue(StringUtils.isNotBlank(text), "text missing for person ID " + member.getId());
         });
+    }
+
+    @Test
+    public void shouldLoadMemberMastodon() {
+        // given
+        DataRepository repository = DataRepository.getInstance();
+        repository.reload();
+
+        assertFalse(repository.getMembers().isEmpty());
+
+        // when
+        Optional<Member> fd = repository.getMembers().stream()
+                .filter(m -> m.getId().equals("f.delporte"))
+                .findFirst();
+
+        assertTrue(fd.isPresent());
+        assertEquals("https://foojay.social/@frankdelporte", fd.get().getMastodon(), "mastodon link not loaded");
+    }
+
+    @Test
+    public void shouldLoadMemberBluesky() {
+        // given
+        DataRepository repository = DataRepository.getInstance();
+        repository.reload();
+
+        assertFalse(repository.getMembers().isEmpty());
+
+        // when
+        Optional<Member> fd = repository.getMembers().stream()
+                .filter(m -> m.getId().equals("f.delporte"))
+                .findFirst();
+
+        assertTrue(fd.isPresent());
+        assertEquals("frankdelporte.bsky.social", fd.get().getBluesky(), "bluesky link not loaded");
     }
 
     @Test
