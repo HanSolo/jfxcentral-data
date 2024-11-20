@@ -243,7 +243,7 @@ public class DataRepositoryTest {
     @Test
     public void shouldLoadPersonBluesky() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getPeople().isEmpty());
@@ -277,7 +277,7 @@ public class DataRepositoryTest {
     @Test
     public void shouldLoadMemberMastodon() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getMembers().isEmpty());
@@ -294,7 +294,7 @@ public class DataRepositoryTest {
     @Test
     public void shouldLoadMemberBluesky() {
         // given
-        DataRepository2 repository = DataRepository2.getInstance();
+        DataRepository repository = DataRepository.getInstance();
         repository.reload();
 
         assertFalse(repository.getMembers().isEmpty());
