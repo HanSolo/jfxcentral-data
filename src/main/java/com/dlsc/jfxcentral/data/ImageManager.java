@@ -48,9 +48,6 @@ public class ImageManager {
 
     private static final ImageManager instance = new ImageManager();
 
-    private ImageManager() {
-    }
-
     public static synchronized ImageManager getInstance() {
         return instance;
     }
@@ -321,7 +318,7 @@ public class ImageManager {
 
                 connection.connect();
 
-                Image image = new Image(url.toExternalForm(), !DataRepository.testing);
+                Image image = new Image(url.toExternalForm(), !DataRepository.isTesting());
                 image.progressProperty().addListener(it -> {
                     // exception = 404 -> no image found for given URL
                     if (image.getProgress() == 1 && image.getException() == null) {
@@ -332,7 +329,7 @@ public class ImageManager {
                 image.exceptionProperty().addListener(it -> image.getException().printStackTrace());
 
                 // when running unit tests we set the loaded image immediately
-                if (DataRepository.testing) {
+                if (DataRepository.isTesting()) {
                     property.set(image);
                 }
             } catch (Exception e) {
