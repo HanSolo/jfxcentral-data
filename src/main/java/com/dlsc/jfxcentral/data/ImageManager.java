@@ -48,6 +48,9 @@ public class ImageManager {
 
     private static final ImageManager instance = new ImageManager();
 
+    private ImageManager() {
+    }
+
     public static synchronized ImageManager getInstance() {
         return instance;
     }
